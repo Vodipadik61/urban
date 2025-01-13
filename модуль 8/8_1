@@ -1,0 +1,13 @@
+def add_everything_up(a, b):
+    if isinstance(a, str) and isinstance(b, (int, float)):
+        return str(a) + str(b)
+    elif isinstance(b, str) and isinstance(a, (int, float)):
+        return str(a) + str(b)
+    elif isinstance(a, (int, float)) and isinstance(b, (int, float)):
+        return round(a + b, 3)  
+    else:
+        raise TypeError("Unsupported types")
+
+print(add_everything_up(123.456, 'строка'))  
+print(add_everything_up('яблоко', 4215))      
+print(add_everything_up(123.456, 7))           
